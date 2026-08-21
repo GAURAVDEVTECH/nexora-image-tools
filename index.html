@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA Image Tools</title>
+
+    <meta
+        name="description"
+        content="NEXORA Image Tools - Resize, compress and convert images directly in your browser."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="brand">
+            <span class="brand-mark">N</span>
+
+            <div>
+                <h1>NEXORA</h1>
+                <span>IMAGE TOOLS</span>
+            </div>
+        </div>
+
+        <a
+            href="https://github.com/GAURAVDEVTECH"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="github-link"
+        >
+            GitHub
+        </a>
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="badge">NEXORA • DIGITAL TOOLS</p>
+
+            <h2>
+                Resize your images
+                <span>easily.</span>
+            </h2>
+
+            <p class="hero-text">
+                Resize, compress and convert images directly in your browser.
+                Your images stay on your device.
+            </p>
+        </section>
+
+
+        <section class="tool-card">
+
+            <div
+                id="dropZone"
+                class="drop-zone"
+            >
+
+                <div class="upload-icon">
+                    ↑
+                </div>
+
+                <h3>Drop your image here</h3>
+
+                <p>or choose an image from your device</p>
+
+                <label class="upload-button">
+                    Choose Image
+
+                    <input
+                        type="file"
+                        id="imageInput"
+                        accept="image/*"
+                        hidden
+                    >
+                </label>
+
+                <small>
+                    JPG, PNG, WebP • Max recommended size: 20MB
+                </small>
+
+            </div>
+
+
+            <div
+                id="editor"
+                class="editor hidden"
+            >
+
+                <div class="preview-area">
+
+                    <div class="preview-header">
+                        <h3>Preview</h3>
+
+                        <button
+                            id="resetButton"
+                            class="text-button"
+                        >
+                            Change Image
+                        </button>
+                    </div>
+
+                    <div class="preview-box">
+                        <img
+                            id="previewImage"
+                            alt="Image preview"
+                        >
+                    </div>
+
+                    <p id="originalInfo" class="image-info"></p>
+
+                </div>
+
+
+                <div class="controls">
+
+                    <div class="control-group">
+
+                        <label for="width">
+                            Width
+                        </label>
+
+                        <div class="input-with-unit">
+                            <input
+                                type="number"
+                                id="width"
+                                min="1"
+                            >
+
+                            <span>px</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="control-group">
+
+                        <label for="height">
+                            Height
+                        </label>
+
+                        <div class="input-with-unit">
+                            <input
+                                type="number"
+                                id="height"
+                                min="1"
+                            >
+
+                            <span>px</span>
+                        </div>
+
+                    </div>
+
+
+                    <label class="checkbox-row">
+
+                        <input
+                            type="checkbox"
+                            id="aspectRatio"
+                            checked
+                        >
+
+                        <span>
+                            Maintain aspect ratio
+                        </span>
+
+                    </label>
+
+
+                    <div class="control-group">
+
+                        <label for="format">
+                            Output format
+                        </label>
+
+                        <select id="format">
+
+                            <option value="image/jpeg">
+                                JPG
+                            </option>
+
+                            <option value="image/png">
+                                PNG
+                            </option>
+
+                            <option value="image/webp">
+                                WebP
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        id="qualityGroup"
+                        class="control-group"
+                    >
+
+                        <div class="label-row">
+
+                            <label for="quality">
+                                Quality
+                            </label>
+
+                            <span id="qualityValue">
+                                90%
+                            </span>
+
+                        </div>
+
+                        <input
+                            type="range"
+                            id="quality"
+                            min="10"
+                            max="100"
+                            value="90"
+                        >
+
+                    </div>
+
+
+                    <button
+                        id="resizeButton"
+                        class="primary-button"
+                    >
+                        Resize & Download
+                    </button>
+
+                    <p
+                        id="status"
+                        class="status"
+                    ></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 NEXORA • Built by
+            <strong>GAURAVDEVTECH</strong>
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
